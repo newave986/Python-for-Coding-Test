@@ -19,11 +19,11 @@ def BFS(N, M, visited):
     while queue:
         k, count = queue.popleft()
 
-        if k == M:
-            break
-        
         if visited[k] == False:
             
+            if k == M:
+                break
+        
             count += 1
             visited[k] = True
             
