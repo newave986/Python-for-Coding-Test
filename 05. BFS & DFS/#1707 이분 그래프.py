@@ -13,19 +13,19 @@ Created on Tue Jan 12 04:01:54 2021
 # test case 1) 에서, 3은 lv 1의 노드(1, 2의 부모 노드) 이고 1,2는 lv 2의 노드로 3의 자식 노드임.
 # 그럼 자식 노드로 분류한 다음 자식 노드끼리 같은 레벨을 가진다고 하면 false 출력해야겠네.
 
+import sys as sys
 from collections import deque
 
-num = int(input())
+num = int(sys.stdin.readline())
 
 for k in range(num):
     
-    ver, edg = map(int, input().split())
+    ver, edg = map(int, sys.stdin.readline().split())
     my_list = [[] for _ in range(ver+1)]
     queue = deque()
     
-    # edge 정보 입력받고 list에 넣는 부분
     for i in range(edg):
-        a, b = map(int, input().split())
+        a, b = map(int, sys.stdin.readline().split())
         my_list[a].append(b)
         my_list[b].append(a)
     
@@ -40,17 +40,16 @@ for k in range(num):
         
         k = queue.popleft()
     
-        if visited[k] == False:
-            visited[k] = True
-            for t in my_list[k]:
-                if visited[t] == False:
-                    queue.append(t)
-                if level[t] == level[k]:
-                    status = False
-                    break
-                elif level[t] == 0:
-                    level[t] = 3-level[k]
+        for t in my_list[k]:
+            if visited[t] == False:
+                queue.append(t)
+                    
+            if level[t] == 0:
+                 level[t] = -level[k]
+                    
+            elif level[t] == level[k]:
+                 status = False
+                 break
     
     if status == False: print("NO")
     else: print("YES")
-
