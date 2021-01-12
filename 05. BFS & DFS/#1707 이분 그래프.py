@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 12 17:54:57 2021
+
+@author: redem
+"""
+
 import sys as sys
 from collections import deque
 
