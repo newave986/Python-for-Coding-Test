@@ -2,7 +2,7 @@
 """
 Created on Tue Jan 12 17:54:57 2021
 
-@author: redem
+@author: newave986.git
 """
 
 import sys as sys
