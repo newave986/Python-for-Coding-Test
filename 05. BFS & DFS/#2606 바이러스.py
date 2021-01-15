@@ -29,5 +29,5 @@ def DFS(num):
             virus.append(i)
             DFS(i)
 
-BFS(virus[0])
+DFS(virus[0])
 print(len(virus) - 1)
