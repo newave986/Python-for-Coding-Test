@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 19 13:19:06 2021
+
+@author: newave986.git
+"""
+
+# BOJ 2108
+
+import sys
+
+def rounding(x):
+    if x % 1 >= 0.5:
+        return int(x) + 1
+    else:
+        return int(x)
+    
+
+def mostNum(n):
+    global numList
+    
+    t = - numList[0]
+    mostnumList = [numList[i] + t for i in range(n)]
+    
+    count = [0 for _ in range(max(mostnumList) + 1)]
+    c = []
+                
+    for k in range(n):
+        if mostnumList[k] in mostnumList:
+            count[mostnumList[k]] += 1
+            
+    countMax = max(count)
+
+    for j in range(len(count)):
+        if count[j] == countMax:
+            c.append(j)
+    
+    if len(c) == 1:
+        return c[0] - t
+    else:
+        return c[1] - t
+
+
+n = int(sys.stdin.readline())
+numList = []
+
+for i in range(n):
+    num = int(sys.stdin.readline())
+    numList.append(num)
+
+numList.sort()
+
+numSum = sum(numList)
+
+print(rounding(numSum/n))
+print(numList[int(n/2)])
+print(mostNum(n))
+print(numList[len(numList)-1]-numList[0])
