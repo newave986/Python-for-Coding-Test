@@ -8,7 +8,7 @@ Created on Sat Jan 23 13:06:50 2021
 import sys 
 #sys.stdin.readline()
 
-def findMaxLong(start, end):
+def find_max_long(start, end):
     
     while start <= end:
         
@@ -38,4 +38,4 @@ for _ in range(K):
     
 array.sort()
 
-findMaxLong(1, array[K-1])
+find_max_long(1, array[K-1])
