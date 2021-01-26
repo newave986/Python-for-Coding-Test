@@ -7,10 +7,10 @@ Created on Tue Jan 26 12:56:58 2021
 
 # BOJ 1912 연속합 - 다이나믹 프로그래밍 / 동적 계획법
 
+# 런타임 에러 -> BOJ에 제출할 때 import sys 안 넣어서... babo....
+
 # import sys
 # sys.stdin.readline()
-
-# 런타임 에러
 
 def continuous_sum(x):
     
