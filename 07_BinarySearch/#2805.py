@@ -24,11 +24,9 @@ def cut_tree(start, end):
                 pass
             
         if bring >= M:
-            # end = mid - 1
             start = mid + 1
             
         else:
-            # start = mid + 1
             end = mid - 1
     
     return end
