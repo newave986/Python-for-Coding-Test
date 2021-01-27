@@ -1,58 +1,84 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Jan 19 13:19:06 2021
+Changed on Wed Jan 27 12:27    2021
 
-@author: newave986.git
+@author: newave986.git 
 """
 
 # BOJ 2108 통계학 - 정렬
+# 틀렸대용... 다음에 고쳐
 
-import sys
+# import sys
+# sys.stdin.readline()
 
-def rounding(x):
-    if x % 1 >= 0.5:
-        return int(x) + 1
+def round_number(numlist, n):
+    
+    x = sum(numlist) / n
+    
+    if x > 0:
+        if x % 1 >= 0.5:
+            return int(x) + 1
+        else:
+            return int(x)
     else:
-        return int(x)
+        if x % 1 < 0.5:
+            return int(x) - 1
+        else:
+            return int(x)
     
+def mid_number(numlist, n):
+    return numlist[n//2]
 
-def mostNum(n):
-    global numList
     
-    t = - numList[0]
-    mostnumList = [numList[i] + t for i in range(n)]
+def most_number(numlist, n):
     
-    count = [0 for _ in range(max(mostnumList) + 1)]
+    t = - numlist[0]
+    mostnumlist = [numlist[i] + t for i in range(n)]
+    
+    count = [0 for _ in range(max(mostnumlist) + 1)]
     c = []
                 
     for k in range(n):
-        if mostnumList[k] in mostnumList:
-            count[mostnumList[k]] += 1
+        count[mostnumlist[k]] += 1
             
-    countMax = max(count)
+    count_max = max(count)
 
     for j in range(len(count)):
-        if count[j] == countMax:
+        if count[j] == count_max:
             c.append(j)
     
     if len(c) == 1:
         return c[0] - t
     else:
         return c[1] - t
+    
+    
+def range_number(numlist, n):
+    return numlist[n-1] - numlist[0]
 
 
-n = int(sys.stdin.readline())
-numList = []
+
+
+
+n = int(input())
+numlist = []
 
 for i in range(n):
-    num = int(sys.stdin.readline())
-    numList.append(num)
+    num = int(input())
+    numlist.append(num)
 
-numList.sort()
+numlist.sort()
 
-numSum = sum(numList)
+print(round_number(numlist, n))
+print(mid_number(numlist, n))
+print(most_number(numlist, n))
+print(range_number(numlist, n))
 
-print(rounding(numSum/n))
-print(numList[int(n/2)])
-print(mostNum(n))
-print(numList[len(numList)-1]-numList[0])
+
+
+
+
+
+
+
