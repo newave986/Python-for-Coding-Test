@@ -7,11 +7,19 @@ Changed on Wed Jan 27 11:32    2021
 """
 
 # runtime error
+             
+# import sys
+# sys.stdin.readline()
 
-def make_level():
-    
-    global queue
+from collections import deque
+
+def make_level(x):
+
     global status
+    
+    queue = deque()
+    queue.append(x)
+    level[x] = 1
     
     while queue:
         
@@ -25,12 +33,9 @@ def make_level():
                     
             elif level[t] == level[k]:
                  status = False
-                 break
+                 return 0
              
-# import sys
-# sys.stdin.readline()
-
-from collections import deque
+    return 1      
 
 num = int(input())
 
@@ -38,7 +43,6 @@ for k in range(num):
     
     ver, edg = map(int, input().split())
     my_list = [[] for _ in range(ver+1)]
-    queue = deque()
     
     for i in range(edg):
         a, b = map(int, input().split())
@@ -49,19 +53,17 @@ for k in range(num):
     level[0] = 1
     status = True
     
-    queue.append(1)
-    level[1] = 1
-    
-    make_level()
-             
-    for l in level:
-        if l == 0:
-            queue.apped(l)
-            level[l] = 1
-            make_level()
-    
-    if 0 in level:
-        status = False
+    for l in range(1, ver+1):
+            if status != False:
+                if level[l] == 0:
+                    make_level(l)
+                    
+    if 0 in level: status == False
     
     if status == False: print("NO")
     else: print("YES")
+
+
+
+
+    
