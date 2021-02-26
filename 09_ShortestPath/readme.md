@@ -2,7 +2,7 @@ Chapter 09. Shortest Path
 =================
 최단 경로 알고리즘
 
-1753 https://www.acmicpc.net/problem/1753 </br>
+1753 https://www.acmicpc.net/problem/1753 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
 11404 https://www.acmicpc.net/problem/11404
 
 ## 개요
