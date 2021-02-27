@@ -3,7 +3,7 @@ Chapter 09. Shortest Path
 최단 경로 알고리즘
 
 1753 https://www.acmicpc.net/problem/1753 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
-11404 https://www.acmicpc.net/problem/11404
+11404 https://www.acmicpc.net/problem/11404 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
 
 ## 개요
 - 가장 짧은 경로를 찾는 알고리즘
@@ -276,7 +276,7 @@ for k in range(1, n + 1):
 for a in range(1, n + 1):
     for b in range(1, n + 1):
         # 도달할 수 없는 경우, 무한(INFINITY)이라고 출력
-        if graph[a][b] = INF:
+        if graph[a][b] == INF:
             print("INFINITY", end = " ")
         # 도달할 수 있는 경우, 거리를 출력
         else:
