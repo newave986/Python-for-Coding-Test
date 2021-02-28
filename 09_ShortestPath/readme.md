@@ -2,8 +2,11 @@ Chapter 09. Shortest Path
 =================
 최단 경로 알고리즘
 
-1753 https://www.acmicpc.net/problem/1753 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
-11404 https://www.acmicpc.net/problem/11404 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
+> 1753 https://www.acmicpc.net/problem/1753 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
+</br>
+
+> 11404 https://www.acmicpc.net/problem/11404 [✏️](https://github.com/newave986/Python-for-Coding-Test/blob/master/09_ShortestPath/%231753%20%EC%B5%9C%EB%8B%A8%20%EA%B2%BD%EB%A1%9C%20dijkstra.py) </br>
+> ###### 주의! 간선의 정보가 하나가 아닐 수 있기 때문에 입력받을 때 min으로 그래프에 넣어 주어야 함 
 
 ## 개요
 - 가장 짧은 경로를 찾는 알고리즘
