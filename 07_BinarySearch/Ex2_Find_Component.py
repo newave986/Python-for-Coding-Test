@@ -41,20 +41,3 @@ for i in require:
         print("no", end = " ")
     else:
         print("yes", end = " ")
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
