@@ -142,7 +142,7 @@ dfs(graph, 1, visited)
 
 
 
-## [DFS *Dept First Search*]
+## [BFS *Breadth First Search*]
 
 - Breadth First Search
 
@@ -150,14 +150,17 @@ dfs(graph, 1, visited)
 
 
 deque 라이브러리 사용하는 것이 좋음
+
 탐색 수행함에 있어 O(N)의 시간 소요됨
+
 DFS보다 BFS 구현이 조금 더 빠르게 구현됨
-재귀 함수로 DFS 구현하면 느려질 수 잇음
+
+재귀 함수로 DFS 구현하면 느려질 수 있음
 
 
 
 
-### DFS의 구체적인 동작
+### BFS의 구체적인 동작
 
 queue 자료 구조 이용
 
